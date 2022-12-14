@@ -1,0 +1,16 @@
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.8.0+cpu
+
+-f https://pytorch-geometric.com/whl/torch-1.8.0+cpu.html
+torch-scatter==2.0.7
+torch-sparse==0.6.9
+torch-cluster==1.5.9
+torch-spline-conv==1.2.1
+torch-geometric==1.7.0
+annoy
+
+#-f https://data.pyg.org/whl/torch-1.13.0+cpu.html
+#torch==1.13.0+cpu                # must be installed before pyG
+#torchvision==0.14.0+cpu
+#torchaudio==0.13.0+cpu
+#pyg-lib
