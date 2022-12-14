@@ -1,4 +1,4 @@
-## Package *clm_nets* for claims network analytics/GNNs 
+## Package *clm-nets* for claims network analytics/GNNs 
 
 Package was developed with *python 3.7* and *pytorch 1.8.0*
 
