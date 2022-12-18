@@ -79,6 +79,32 @@ walks_per_node = 20
 
 G = nx.karate_club_graph()
 
+A = nx.adjacency_matrix(G)
+A.toarray()
+
+eigen_val = nx.laplacian_spectrum(G, weight='weight')
+len(eigen_val)
+
+lapl = nx.normalized_laplacian_matrix(G, nodelist=None, weight='weight')
+lapl.toarray().shape
+
+from sklearn.cluster import KMeans
+
+kmeans = KMeans(n_clusters=5, random_state=0).fit(A.toarray())
+kmeans.labels_
+#kmeans.cluster_centers_
+
+new_attr = {z:a for z,a in enumerate(kmeans.labels_)}
+
+nx.set_node_attributes(G, new_attr, "kmeans_cluster")
+
+G.nodes(data=True)
+
+
+G[2]
+
+G.nodes(data=True)
+G
 
 
 start = random.choice(list(G.nodes()))
